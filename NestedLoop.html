@@ -8,15 +8,15 @@
 <script>
     function printTable()
     {
-        for(let i = 1; i <= 10; i++){
-            for(let j = 1; j <= 10; j++ ){
-                if(j == 10){
-                    document.write(i * j + "<br>");
-                    break;
-                }
-                document.write(i * j);
+        let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for(let i = 1; i <= 10; i++) {
+            table = table + "<tr>";
+            for (let j = 1; j <= 10; j++) {
+                table = table + "<td align='center'>" + (i * j).toString() + "</td>";
             }
+            table = table + "</tr>";
         }
+        document.write(table);
     }
 </script>
 </body>
